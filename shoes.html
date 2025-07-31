@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Shoes - MS King Grand Outlet UAE</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gold: #D4AF37;
+            --dark-gold: #B8941F;
+            --light-gold: #F4E4BC;
+            --royal-black: #1a1a1a;
+            --charcoal: #2d2d2d;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #6c757d;
+            --accent-green: #2d5a27;
+            --gradient-primary: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
+            --gradient-dark: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            --shadow-light: 0 4px 20px rgba(212, 175, 55, 0.15);
+            --shadow-dark: 0 8px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--royal-black);
+            background-color: var(--light-gray);
+        }
+
+        /* Header Styles - Same as index.html */
+        .header {
+            background: var(--gradient-dark);
+            color: var(--white);
+            padding: 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-dark);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+            filter: drop-shadow(0 2px 8px rgba(212, 175, 55, 0.3));
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: -0.5px;
+        }
+
+        .brand-tagline {
+            font-size: 0.75rem;
+            color: var(--light-gold);
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: -5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            background: var(--gradient-primary);
+            color: var(--royal-black);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-light);
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger:hover {
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-gold);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 80px);
+            background: var(--gradient-dark);
+            backdrop-filter: blur(20px);
+            z-index: 999;
+            padding: 2rem;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .mobile-menu a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid transparent;
+        }
+
+        .mobile-menu a:hover {
+            background: var(--gradient-primary);
+            color: var(--royal-black);
+            border-color: var(--primary-gold);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: var(--gradient-dark);
+            color: var(--white);
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, rgba(26, 26, 26, 0.4) 100%);
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-dark);
+            border-color: var(--primary-gold);
+        }
+
+        .product-image {
+            height: 280px;
+            background: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-image .fallback-icon {
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-dark);
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-gold);
+            font-size: 3rem;
+        }
+
+        .product-info {
+            padding: 2rem;
+        }
+
+        .product-brand {
+            color: var(--primary-gold);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-name {
+            font-family: 'Playfair Display', serif;
+            color: var(--royal-black);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .product-sizes {
+            margin: 1rem 0;
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .product-price {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--royal-black);
+            margin: 1.5rem 0;
+        }
+
+        .product-original-price {
+            text-decoration: line-through;
+            color: var(--medium-gray);
+            font-size: 1.1rem;
+            margin-left: 0.5rem;
+            font-weight: 400;
+        }
+
+        .product-features {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .product-features li {
+            color: var(--medium-gray);
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-features li:before {
+            content: "✓";
+            color: var(--primary-gold);
+            font-weight: bold;
+            margin-right: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .buy-now-btn {
+            width: 100%;
+            background: var(--gradient-primary);
+            color: var(--royal-black);
+            border: none;
+            padding: 1rem;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .buy-now-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-light);
+        }
+
+        /* Footer - Same as index.html */
+        .footer {
+            background: var(--gradient-dark);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo img {
+            height: 50px;
+        }
+
+        .footer-brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-section h3 {
+            color: var(--primary-gold);
+            margin-bottom: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin: 0.75rem 0;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(212, 175, 55, 0.3);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .brand-name {
+                font-size: 1.8rem;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        /* Scroll Animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="brand-section">
+                <div class="logo-container">
+                    <img src="ms.png" alt="MS King Logo" class="logo-img">
+                    <div class="brand-text">
+                        <div class="brand-name">MS KING</div>
+                        <div class="brand-tagline">Grand Outlet</div>
+                    </div>
+                </div>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shoes.html" class="active">Shoes</a></li>
+                <li><a href="watches.html">Watches</a></li>
+                <li><a href="bags.html">Bags</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html" onclick="closeMobileMenu()">Home</a></li>
+                <li><a href="shoes.html" onclick="closeMobileMenu()">Shoes</a></li>
+                <li><a href="watches.html" onclick="closeMobileMenu()">Watches</a></li>
+                <li><a href="bags.html" onclick="closeMobileMenu()">Bags</a></li>
+                <li><a href="index.html#about" onclick="closeMobileMenu()">About</a></li>
+                <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1>Premium Footwear</h1>
+            <p>Discover our exclusive collection of luxury designer shoes from the world's most prestigious brands. Each pair represents the perfect fusion of style, comfort, and craftsmanship.</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s1.jpeg" alt="Nike Air Jordan 1 High" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Nike</div>
+                        <h3 class="product-name">Air Jordan 1 High OG</h3>
+                        <div class="product-sizes">Available Sizes: 36 to 45</div>
+                        <div class="product-price">AED 299 <span class="product-original-price">AED 899</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Nike Air Jordan 1 High OG', 'AED 299')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s2.jpeg" alt="Adidas Yeezy Boost 350" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Adidas</div>
+                        <h3 class="product-name">Yeezy Boost 350 V2</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 349 <span class="product-original-price">AED 1,199</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Adidas Yeezy Boost 350 V2', 'AED 349')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Continue with more products... -->
+                <!-- I'll add a few more key products to demonstrate the pattern -->
+
+                <!-- Product 3 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s3.jpeg" alt="Nike Air Force 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Nike</div>
+                        <h3 class="product-name">Air Force 1 Low White</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 249 <span class="product-original-price">AED 699</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Nike Air Force 1 Low White', 'AED 249')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Add more products following the same pattern up to 30 products -->
+                <!-- Product 4 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s4.jpeg" alt="Balenciaga Triple S" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Balenciaga</div>
+                        <h3 class="product-name">Triple S Sneakers</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 399 <span class="product-original-price">AED 1,299</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Balenciaga Triple S Sneakers', 'AED 399')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s5.jpeg" alt="Nike Dunk Low" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Nike</div>
+                        <h3 class="product-name">Dunk Low Panda</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 279 <span class="product-original-price">AED 799</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Nike Dunk Low Panda', 'AED 279')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s6.jpeg" alt="Adidas Stan Smith" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Adidas</div>
+                        <h3 class="product-name">Stan Smith Classic</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 199 <span class="product-original-price">AED 549</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Adidas Stan Smith Classic', 'AED 199')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s7.jpeg" alt="Nike Air Max 90" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Nike</div>
+                        <h3 class="product-name">Air Max 90 White</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 269 <span class="product-original-price">AED 749</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Nike Air Max 90 White', 'AED 269')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s8.jpeg" alt="Jordan 4 Retro" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Jordan</div>
+                        <h3 class="product-name">Air Jordan 4 Retro</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 329 <span class="product-original-price">AED 999</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Air Jordan 4 Retro', 'AED 329')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s9.jpeg" alt="Converse Chuck Taylor" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Converse</div>
+                        <h3 class="product-name">Chuck Taylor All Star</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 179 <span class="product-original-price">AED 449</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Converse Chuck Taylor All Star', 'AED 179')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s10.jpeg" alt="Vans Old Skool" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Vans</div>
+                        <h3 class="product-name">Old Skool Black/White</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 189 <span class="product-original-price">AED 499</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Vans Old Skool Black/White', 'AED 189')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s11.jpeg" alt="Nike Air Max 270" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Nike</div>
+                        <h3 class="product-name">Air Max 270 React</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 289 <span class="product-original-price">AED 799</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Nike Air Max 270 React', 'AED 289')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 12 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s12.jpeg" alt="Adidas Ultraboost" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Adidas</div>
+                        <h3 class="product-name">Ultraboost 22</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 319 <span class="product-original-price">AED 899</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Adidas Ultraboost 22', 'AED 319')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 13 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s13.jpeg" alt="Puma RS-X" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Puma</div>
+                        <h3 class="product-name">RS-X Reinvention</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 259 <span class="product-original-price">AED 699</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Puma RS-X Reinvention', 'AED 259')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 14 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s14.jpeg" alt="Reebok Classic Leather" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Reebok</div>
+                        <h3 class="product-name">Classic Leather</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 189 <span class="product-original-price">AED 499</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Reebok Classic Leather', 'AED 189')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 15 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s15.jpeg" alt="New Balance 574" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">New Balance</div>
+                        <h3 class="product-name">574 Core</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 229 <span class="product-original-price">AED 599</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('New Balance 574 Core', 'AED 229')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 16 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s16.jpeg" alt="Gucci Ace Sneaker" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Gucci</div>
+                        <h3 class="product-name">Ace Embroidered Sneaker</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 3499 <span class="product-original-price">AED 8999</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Gucci Ace Embroidered Sneaker', 'AED 3499')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 17 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s17.jpeg" alt="Prada Cloudbust Thunder" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Prada</div>
+                        <h3 class="product-name">Cloudbust Thunder</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 2999 <span class="product-original-price">AED 7999</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Prada Cloudbust Thunder', 'AED 2999')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 18 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s18.jpeg" alt="Versace Chain Reaction" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Versace</div>
+                        <h3 class="product-name">Chain Reaction</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 2799 <span class="product-original-price">AED 6999</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Versace Chain Reaction', 'AED 2799')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 19 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s19.jpeg" alt="Alexander McQueen Oversized Sneaker" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Alexander McQueen</div>
+                        <h3 class="product-name">Oversized Sneaker</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 2499 <span class="product-original-price">AED 5999</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Alexander McQueen Oversized Sneaker', 'AED 2499')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 20 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s20.jpeg" alt="Balmain B-Court" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Balmain</div>
+                        <h3 class="product-name">B-Court</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 2299 <span class="product-original-price">AED 5499</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Balmain B-Court', 'AED 2299')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 21 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s21.jpeg" alt="Givenchy City Sport" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Givenchy</div>
+                        <h3 class="product-name">City Sport</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 2199 <span class="product-original-price">AED 5299</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Givenchy City Sport', 'AED 2199')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 22 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s22.jpeg" alt="Saint Laurent Malibu" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Saint Laurent</div>
+                        <h3 class="product-name">Malibu</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 1999 <span class="product-original-price">AED 4999</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Saint Laurent Malibu', 'AED 1999')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 23 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s23.jpeg" alt="Fendi Match" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Fendi</div>
+                        <h3 class="product-name">Match</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 1899 <span class="product-original-price">AED 4799</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Fendi Match', 'AED 1899')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 24 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s24.jpeg" alt="Valentino Garavani Open" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Valentino Garavani</div>
+                        <h3 class="product-name">Open</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 2099 <span class="product-original-price">AED 5199</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Valentino Garavani Open', 'AED 2099')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 25 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s25.jpeg" alt="Burberry Ramsey" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Burberry</div>
+                        <h3 class="product-name">Ramsey</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 1799 <span class="product-original-price">AED 4499</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Burberry Ramsey', 'AED 1799')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 26 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s26.jpeg" alt="Dior B22" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Dior</div>
+                        <h3 class="product-name">B22</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 2399 <span class="product-original-price">AED 5799</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Dior B22', 'AED 2399')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 27 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s27.jpeg" alt="Lanvin Curb" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Lanvin</div>
+                        <h3 class="product-name">Curb</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 1699 <span class="product-original-price">AED 4299</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Lanvin Curb', 'AED 1699')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 28 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s28.jpeg" alt="Maison Margiela Replica" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Maison Margiela</div>
+                        <h3 class="product-name">Replica</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 1599 <span class="product-original-price">AED 3999</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Maison Margiela Replica', 'AED 1599')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 29 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s29.jpeg" alt="Loewe Flow Runner" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Loewe</div>
+                        <h3 class="product-name">Flow Runner</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 1499 <span class="product-original-price">AED 3799</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Loewe Flow Runner', 'AED 1499')">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- Product 30 -->
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        <img src="simg/s30.jpeg" alt="Off-White Out of Office" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="fallback-icon"><i class="fas fa-running"></i></div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">Off-White</div>
+                        <h3 class="product-name">Out of Office</h3>
+                        <div class="product-sizes">Available Sizes: 40, 41, 42, 43, 44, 45</div>
+                        <div class="product-price">AED 1399 <span class="product-original-price">AED 3499</span></div>
+                        <ul class="product-features">
+                            <li>Free Delivery All UAE</li>
+                            <li>Cash on Delivery Available</li>
+                            <li>Premium Quality Materials</li>
+                            <li>Authentic Design Details</li>
+                        </ul>
+                        <button class="buy-now-btn" onclick="buyNow('Off-White Out of Office', 'AED 1399')">Buy Now</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="ms.png" alt="MS King Logo">
+                    <div class="footer-brand-name">MS KING</div>
+                </div>
+                <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 2rem;">
+                    Your premier destination for luxury designer shoes in the UAE. Experience excellence with every step.
+                </p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#" style="color: var(--primary-gold); font-size: 1.5rem;"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: var(--primary-gold); font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/971562100239" style="color: var(--primary-gold); font-size: 1.5rem;"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shoes.html">Premium Shoes</a></li>
+                    <li><a href="watches.html">Luxury Watches</a></li>
+                    <li><a href="bags.html">Designer Bags</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Collections</h3>
+                <ul>
+                    <li><a href="shoes.html">Nike & Adidas</a></li>
+                    <li><a href="watches.html">Rolex & Omega</a></li>
+                    <li><a href="bags.html">Gucci & LV</a></li>
+                    <li><a href="bags.html">Chanel & Hermès</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt" style="color: var(--primary-gold); margin-right: 0.5rem;"></i> Available All UAE</li>
+                    <li><i class="fas fa-phone" style="color: var(--primary-gold); margin-right: 0.5rem;"></i> +971 56 210 0239</li>
+                    <li><i class="fas fa-envelope" style="color: var(--primary-gold); margin-right: 0.5rem;"></i> mskinggrandoutlet@gmail.com</li>
+                    <li><i class="fas fa-clock" style="color: var(--primary-gold); margin-right: 0.5rem;"></i> 24/7 Customer Support</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 MS King Grand Outlet. All rights reserved. | Premium Quality Designer Shoes</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/971562100239?text=Hello%20MS%20King!%20I'm%20interested%20in%20your%20premium%20shoes%20collection" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            hamburger.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        }
+
+        function buyNow(productName, price) {
+            const message = `Hello MS King! I'm interested in buying: ${productName} - ${price}. Please provide more details about availability and delivery.`;
+            const whatsappUrl = `https://wa.me/971562100239?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Scroll reveal animation
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.scroll-reveal');
+            
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('revealed');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(26, 26, 26, 0.95)';
+                header.style.backdropFilter = 'blur(20px)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)';
+                header.style.backdropFilter = 'blur(10px)';
+            }
+        });
+
+        // Initialize animations on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            revealOnScroll();
+            
+            // Add stagger animation to product cards
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const hamburger = document.querySelector('.hamburger');
+            
+            if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+                closeMobileMenu();
+            }
+        });
+    </script>
+</body>
+</html>
