@@ -403,6 +403,12 @@
             transition: transform 0.3s ease;
             height: 120px;
             width: 200px;
+            background: #fff;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(251,191,36,0.08);
+            transition: transform 0.3s;
+            border: 1px solid #fbbf24;
         }
 
         .carousel-item:hover {
@@ -414,12 +420,9 @@
             height: 100%;
             object-fit: cover;
             border-radius: 1rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease;
-        }
-
-        .carousel-item:hover img {
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+            border: 2px solid #fbbf24;
+            background: #fff;
         }
 
         @keyframes scroll {
@@ -938,12 +941,15 @@
             }
 
             .carousel-item {
-                width: 150px;
-                height: 80px;
+                width: 120px;
+                height: 60px;
+                margin-right: 0.5rem;
             }
-
             .carousel-container {
-                height: 80px;
+                height: 60px;
+            }
+            .carousel-tapnow span {
+                font-size: 1rem;
             }
         }
 
@@ -960,7 +966,7 @@
                 <img src="ms.png" alt="MS King Logo" class="brand-logo">
                 <div class="brand-text">
                     <h1>MS KING</h1>
-                    <p>Grand Outlet UAE</p>
+                    <p>Grand Outlet UAE don't forget </p>
                 </div>
             </div>
             <nav class="nav-desktop">
@@ -1022,6 +1028,11 @@
         <p>All over UAE free delivery • Cash on delivery available</p>
     </section>
 
+    <!-- Tap Now Section -->
+    <section class="carousel-tapnow" style="text-align:center; margin-bottom:1rem;">
+        <span style="font-size:1.1rem; font-weight:600; color:#f59e0b;">Tap Now to Explore Categories</span>
+    </section>
+
     <!-- Image Carousel -->
     <section class="image-carousel">
         <div class="carousel-container">
@@ -1029,14 +1040,23 @@
                 <div class="carousel-item" onclick="window.open('https://drive.google.com/drive/folders/1Ys882bSIu4V4uiItSxB21sk79YM2Ccri', '_blank')">
                     <img src="c1.jpg" alt="Category 1">
                 </div>
-                <div class="carousel-item" onclick="window.open('https://drive.google.com/drive/folders/1FtZ8SJ2fiUwXEj4P44Af6pvemqsefm4b')">
+                <div class="carousel-item" onclick="window.open('https://drive.google.com/drive/folders/1FtZ8SJ2fiUwXEj4P44Af6pvemqsefm4b', '_blank')">
                     <img src="c2.jpg" alt="Category 2">
                 </div>
-                <div class="carousel-item" onclick="window.open('https://drive.google.com/drive/folders/1xvuIiULfKcvNkr3al7bX6PBAA7sh93yr')">
+                <div class="carousel-item" onclick="window.open('https://drive.google.com/drive/folders/1xvuIiULfKcvNkr3al7bX6PBAA7sh93yr', '_blank')">
                     <img src="c3.jpg" alt="Category 3">
                 </div>
                 <div class="carousel-item" onclick="window.open('https://drive.google.com/drive/folders/1pejOblDtI5xNxB4EYxNKM15-8OQ2awLa', '_blank')">
                     <img src="c4.jpg" alt="Category 4">
+                </div>
+                <div class="carousel-item" onclick="window.open('https://wisitrix.in', '_blank')">
+                    <img src="c5.jpg" alt="Category 5">
+                </div>
+                <div class="carousel-item" onclick="window.open('https://wisitrix.in', '_blank')">
+                    <img src="c6.jpg" alt="Category 6">
+                </div>
+                <div class="carousel-item" onclick="window.open('https://wisitrix.in', '_blank')">
+                    <img src="c7.jpg" alt="Category 7">
                 </div>
                 <!-- Duplicate images for seamless loop -->
                 <div class="carousel-item" onclick="window.open('https://wisitrix.in', '_blank')">
@@ -1044,12 +1064,6 @@
                 </div>
                 <div class="carousel-item" onclick="window.open('https://wisitrix.in', '_blank')">
                     <img src="c2.jpg" alt="Category 2">
-                </div>
-                <div class="carousel-item" onclick="window.open('https://wisitrix.in', '_blank')">
-                    <img src="c3.jpg" alt="Category 3">
-                </div>
-                <div class="carousel-item" onclick="window.open('https://wisitrix.in', '_blank')">
-                    <img src="c4.jpg" alt="Category 4">
                 </div>
             </div>
         </div>
@@ -1206,7 +1220,7 @@
                 name: "NB100",
                 brand: "New Balance",
                 price: 179,
-                originalPrice: 699,
+                originalPrice: 899,
                 image: "simg/s1.jpeg",
                 features: ["Free Delivery All UAE", "Cash on Delivery Available", "Premium Quality Materials", "Authentic Design Details"],
                 description: "Experience ultimate comfort with the New Balance NB100. These premium sneakers combine classic design with modern technology."
@@ -1216,7 +1230,7 @@
                 name: "On Cloud",
                 brand: "On",
                 price: 179,
-                originalPrice: 499,
+                originalPrice: 1199,
                 image: "simg/s2.jpeg",
                 features: ["Free Delivery All UAE", "Cash on Delivery Available", "Premium Quality Materials", "Authentic Design Details"],
                 description: "Revolutionary cloud technology meets sleek design in these premium On Cloud running shoes."
@@ -1236,7 +1250,7 @@
                 name: "Classic Vans",
                 brand: "Vans",
                 price: 99,
-                originalPrice: 129,
+                originalPrice: 1299,
                 image: "simg/s4.jpeg",
                 features: ["Free Delivery All UAE", "Cash on Delivery Available", "Premium Quality Materials", "Authentic Design Details"],
                 description: "Iconic Vans style meets modern comfort in these timeless skateboard shoes."
@@ -1246,7 +1260,7 @@
                 name: "Louis Vuitton Sneaker",
                 brand: "Louis Vuitton",
                 price: 199,
-                originalPrice: 599,
+                originalPrice: 799,
                 image: "simg/s5.jpeg",
                 features: ["Free Delivery All UAE", "Cash on Delivery Available", "Premium Quality Materials", "Authentic Design Details"],
                 description: "Luxury meets streetwear in these exclusive Louis Vuitton designer sneakers."
@@ -1276,7 +1290,7 @@
                 name: "Air Jordan 4 Retro",
                 brand: "Jordan",
                 price: 179,
-                originalPrice: 349,
+                originalPrice: 999,
                 image: "simg/s8.jpeg",
                 features: ["Free Delivery All UAE", "Cash on Delivery Available", "Premium Quality Materials", "Authentic Design Details"],
                 description: "The legendary Air Jordan 4 in the classic white cement colorway."
@@ -1356,7 +1370,7 @@
                 name: "9060",
                 brand: "New Balance",
                 price: 148,
-                originalPrice: 699,
+                originalPrice: 8999,
                 image: "simg/s16.jpeg",
                 features: ["Free Delivery All UAE", "Cash on Delivery Available", "Premium Quality Materials", "Authentic Design Details"],
                 description: "Modern interpretation of classic New Balance design with advanced cushioning technology."
@@ -1366,7 +1380,7 @@
                 name: "Cloudbust Thunder",
                 brand: "samba",
                 price: 99,
-                originalPrice: 199,
+                originalPrice: 7999,
                 image: "simg/s17.jpeg",
                 features: ["Free Delivery All UAE", "Cash on Delivery Available", "Premium Quality Materials", "Authentic Design Details"],
                 description: "High-fashion meets technical innovation in these luxury Prada sneakers."
@@ -1376,7 +1390,7 @@
                 name: "Trainer sneakers",
                 brand: "LV",
                 price: 129,
-                originalPrice: 299,
+                originalPrice: 6999,
                 image: "simg/s18.jpeg",
                 features: ["Free Delivery All UAE", "Cash on Delivery Available", "Premium Quality Materials", "Authentic Design Details"],
                 description: "Luxury Italian craftsmanship with distinctive chain-link sole design."
@@ -1386,7 +1400,7 @@
                 name: "crocs ride",
                 brand: "Crocs",
                 price: 69,
-                originalPrice: 459,
+                originalPrice: 5999,
                 image: "simg/s19.jpeg",
                 features: ["Free Delivery All UAE", "Cash on Delivery Available", "Premium Quality Materials", "Authentic Design Details"],
                 description: "Iconic oversized silhouette that redefined luxury sneaker design."
@@ -1406,7 +1420,7 @@
                 name: "SoieFly x Air Jordan 1",
                 brand: "Nike",
                 price: 179,
-                originalPrice: 529,
+                originalPrice: 5299,
                 image: "simg/s21.jpeg",
                 features: ["Free Delivery All UAE", "Cash on Delivery Available", "Premium Quality Materials", "Authentic Design Details"],
                 description: "Urban sophistication meets athletic performance in these luxury sneakers."
@@ -1426,7 +1440,7 @@
                 name: "Match",
                 brand: "Fendi",
                 price: 149,
-                originalPrice: 479,
+                originalPrice: 4799,
                 image: "simg/s23.jpeg",
                 features: ["Free Delivery All UAE", "Cash on Delivery Available", "Premium Quality Materials", "Authentic Design Details"],
                 description: "Italian luxury craftsmanship meets modern athletic design."
@@ -1436,7 +1450,7 @@
                 name: "Open",
                 brand: "Valentino Garavani",
                 price: 179,
-                originalPrice: 519,
+                originalPrice: 5199,
                 image: "simg/s24.jpeg",
                 features: ["Free Delivery All UAE", "Cash on Delivery Available", "Premium Quality Materials", "Authentic Design Details"],
                 description: "Roman couture tradition reimagined in contemporary sneaker form."
@@ -1446,7 +1460,7 @@
                 name: "Ramsey",
                 brand: "Burberry",
                 price: 199,
-                originalPrice: 449,
+                originalPrice: 4499,
                 image: "simg/s25.jpeg",
                 features: ["Free Delivery All UAE", "Cash on Delivery Available", "Premium Quality Materials", "Authentic Design Details"],
                 description: "British heritage meets modern luxury in these premium sneakers."
@@ -1456,7 +1470,7 @@
                 name: "Low top",
                 brand: "TimBerland",
                 price: 179,
-                originalPrice: 579,
+                originalPrice: 5799,
                 image: "simg/s26.jpeg",
                 features: ["Free Delivery All UAE", "Cash on Delivery Available", "Premium Quality Materials", "Authentic Design Details"],
                 description: "Parisian haute couture excellence in athletic footwear design."
@@ -1466,7 +1480,7 @@
                 name: "Curb",
                 brand: "Lanvin",
                 price: 169,
-                originalPrice: 429,
+                originalPrice: 4299,
                 image: "simg/s27.jpeg",
                 features: ["Free Delivery All UAE", "Cash on Delivery Available", "Premium Quality Materials", "Authentic Design Details"],
                 description: "Bold architectural design meets French luxury craftsmanship."
@@ -1476,7 +1490,7 @@
                 name: "Replica",
                 brand: "Maison Margiela",
                 price: 159,
-                originalPrice: 399,
+                originalPrice: 3999,
                 image: "simg/s28.jpeg",
                 features: ["Free Delivery All UAE", "Cash on Delivery Available", "Premium Quality Materials", "Authentic Design Details"],
                 description: "Deconstructed luxury with avant-garde Belgian design philosophy."
@@ -1486,7 +1500,7 @@
                 name: "GEL-KAYANO 31",
                 brand: "Asics",
                 price: 149,
-                originalPrice: 379,
+                originalPrice: 3799,
                 image: "simg/s29.jpeg",
                 features: ["Free Delivery All UAE", "Cash on Delivery Available", "Premium Quality Materials", "Authentic Design Details"],
                 description: "Spanish leather expertise meets contemporary athletic aesthetics."
@@ -1496,7 +1510,7 @@
                 name: "XLG Runner Deluxe",
                 brand: "Adidas",
                 price: 139,
-                originalPrice: 349,
+                originalPrice: 3499,
                 image: "simg/s30.jpeg",
                 features: ["Free Delivery All UAE", "Cash on Delivery Available", "Premium Quality Materials", "Authentic Design Details"],
                 description: "Streetwear innovation with luxury fashion sensibilities."
