@@ -142,6 +142,85 @@
             display: block;
         }
 
+        /* Banner Info */
+        .delivery-info {
+            background: #050505;
+            padding: 0.6rem;
+            text-align: center;
+            font-size: 0.65rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* Carousel Section */
+        .carousel-tapnow {
+            padding: 1.5rem 0 0.5rem;
+            text-align: center;
+        }
+
+        .carousel-tapnow span {
+            font-size: 0.8rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .image-carousel {
+            background: var(--bg-dark);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 100px;
+        }
+
+        .carousel-track {
+            display: flex;
+            animation: scroll 20s linear infinite;
+            height: 100%;
+            width: fit-content;
+        }
+
+        .carousel-item {
+            flex: 0 0 auto;
+            margin-right: 1.5rem;
+            cursor: pointer;
+            height: 100px;
+            width: 160px;
+            background: #111;
+            border: 1px solid var(--border);
+            overflow: hidden;
+            transition: border-color 0.3s;
+        }
+
+        .carousel-item:hover {
+            border-color: var(--text-main);
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: filter 0.3s;
+        }
+
+        .carousel-item:hover img {
+            filter: grayscale(0%);
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
         /* Search and Filter */
         .search-filter {
             background: var(--bg-dark);
@@ -189,18 +268,6 @@
             padding: 0.7rem 1rem;
             font-size: 0.75rem;
             text-transform: uppercase;
-        }
-
-        /* Banner Info */
-        .delivery-info {
-            background: #050505;
-            padding: 0.6rem;
-            text-align: center;
-            font-size: 0.65rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            border-bottom: 1px solid var(--border);
         }
 
         /* Products Grid */
@@ -377,64 +444,23 @@
 
         /* Responsive Breakpoints */
         @media (max-width: 992px) {
-            .products-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
+            .products-grid { grid-template-columns: repeat(3, 1fr); }
         }
 
         @media (max-width: 768px) {
-            .nav-desktop {
-                display: none;
-            }
-
-            .mobile-toggle {
-                display: block;
-            }
-
-            .search-filter-container {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .products-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-            }
-
-            .modal-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .modal-image {
-                height: 300px;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .logo-text {
-                font-size: 1.1rem;
-            }
+            .nav-desktop { display: none; }
+            .mobile-toggle { display: block; }
+            .search-filter-container { flex-direction: column; align-items: stretch; }
+            .products-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .modal-grid { grid-template-columns: 1fr; }
+            .modal-image { height: 300px; }
+            .footer-grid { grid-template-columns: 1fr; text-align: center; }
+            .logo-text { font-size: 1.1rem; }
         }
 
         @media (max-width: 480px) {
-            .products-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .product-name {
-                font-size: 0.8rem;
-            }
-            
-            .current-price {
-                font-size: 0.85rem;
-            }
-
-            .modal-details {
-                padding: 1.5rem;
-            }
+            .carousel-item { width: 120px; height: 80px; }
+            .carousel-container { height: 80px; }
         }
     </style>
 </head>
@@ -449,7 +475,6 @@
                 </div>
             </div>
             
-            <!-- Desktop Nav -->
             <nav class="nav-desktop">
                 <ul class="nav-menu">
                     <li><a href="index.html">Home</a></li>
@@ -478,6 +503,43 @@
 
     <section class="delivery-info">
         FREE SHIPPING UAE • CASH ON DELIVERY
+    </section>
+
+    <section class="carousel-tapnow">
+        <span>Explore Categories</span>
+    </section>
+
+    <!-- Moving Image Carousel -->
+    <section class="image-carousel">
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <div class="carousel-item" onclick="window.open('https://drive.google.com/drive/folders/1Ys882bSIu4V4uiItSxB21sk79YM2Ccri', '_blank')">
+                    <img src="c1.jpg" alt="Cat 1" onerror="this.src='/api/placeholder/160/100'">
+                </div>
+                <div class="carousel-item" onclick="window.open('https://drive.google.com/drive/folders/1FtZ8SJ2fiUwXEj4P44Af6pvemqsefm4b', '_blank')">
+                    <img src="c2.jpg" alt="Cat 2" onerror="this.src='/api/placeholder/160/100'">
+                </div>
+                <div class="carousel-item" onclick="window.open('https://drive.google.com/drive/folders/1xvuIiULfKcvNkr3al7bX6PBAA7sh93yr', '_blank')">
+                    <img src="c3.jpg" alt="Cat 3" onerror="this.src='/api/placeholder/160/100'">
+                </div>
+                <div class="carousel-item" onclick="window.open('https://drive.google.com/drive/folders/1pejOblDtI5xNxB4EYxNKM15-8OQ2awLa', '_blank')">
+                    <img src="c4.jpg" alt="Cat 4" onerror="this.src='/api/placeholder/160/100'">
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="carousel-item" onclick="window.open('https://drive.google.com/drive/folders/1Ys882bSIu4V4uiItSxB21sk79YM2Ccri', '_blank')">
+                    <img src="c1.jpg" alt="Cat 1" onerror="this.src='/api/placeholder/160/100'">
+                </div>
+                <div class="carousel-item" onclick="window.open('https://drive.google.com/drive/folders/1FtZ8SJ2fiUwXEj4P44Af6pvemqsefm4b', '_blank')">
+                    <img src="c2.jpg" alt="Cat 2" onerror="this.src='/api/placeholder/160/100'">
+                </div>
+                <div class="carousel-item" onclick="window.open('https://drive.google.com/drive/folders/1xvuIiULfKcvNkr3al7bX6PBAA7sh93yr', '_blank')">
+                    <img src="c3.jpg" alt="Cat 3" onerror="this.src='/api/placeholder/160/100'">
+                </div>
+                <div class="carousel-item" onclick="window.open('https://drive.google.com/drive/folders/1pejOblDtI5xNxB4EYxNKM15-8OQ2awLa', '_blank')">
+                    <img src="c4.jpg" alt="Cat 4" onerror="this.src='/api/placeholder/160/100'">
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="search-filter">
@@ -607,7 +669,7 @@
                 return `
                     <div class="product-item" onclick="openModal(${p.id})">
                         <div class="product-image">
-                            <img src="${p.image}" alt="${p.name}" loading="lazy">
+                            <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='/api/placeholder/400/400'">
                             <div class="discount-badge">-${disc}%</div>
                         </div>
                         <div class="product-info">
